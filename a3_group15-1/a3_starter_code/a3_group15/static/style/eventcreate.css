@@ -1,0 +1,146 @@
+/* Styles */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+.navbar-nav.ml-auto {
+    margin-left: auto; 
+}
+
+.nav-link.d-flex.align-items-center {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link.d-flex.align-items-center span {
+    margin-right: 10px; /* Adjust the spacing between the text and the icon */
+}
+
+.uil--user-circle {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M12 2a10 10 0 0 0-7.35 16.76a10 10 0 0 0 14.7 0A10 10 0 0 0 12 2m0 18a8 8 0 0 1-5.55-2.25a6 6 0 0 1 11.1 0A8 8 0 0 1 12 20m-2-10a2 2 0 1 1 2 2a2 2 0 0 1-2-2m8.91 6A8 8 0 0 0 15 12.62a4 4 0 1 0-6 0A8 8 0 0 0 5.09 16A7.9 7.9 0 0 1 4 12a8 8 0 0 1 16 0a7.9 7.9 0 0 1-1.09 4'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+.uil--menu {
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M3 8h18a1 1 0 0 0 0-2H3a1 1 0 0 0 0 2m18 8H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2m0-5H3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+
+/* Body */
+/* image upload */
+#imageUpload {
+    margin-top: 10px;
+}
+
+#imagePreview {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    word-wrap: break-word; /* Ensure long words break correctly */
+    overflow: visible; /* Ensure text is not cut off */
+}
+
+.card {
+    width: 80%; /* Ensure the card spans 80% of the page width */
+    margin: 0 auto; /* Center the card */
+}
+
+
+
+
+/* Custom CSS for Navbar Toggle */
+#navbar-toggle {
+    display: none;
+}
+
+#navbar-toggle:checked + .navbar-toggler-icon + .collapse {
+    display: block;
+}
+
+.collapse {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .collapse {
+        display: flex !important;
+    }
+}
+
+/* dropdown */
+
+.dropdown-menu {
+    margin-top: 10px;
+}
+
+/* Footer code */
+/* Footer Styles */
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+footer h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 0.5rem;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    margin-bottom: 10px;
+}
+
+footer ul li a {
+    color: #343a40;
+    text-decoration: none;
+    font-size: 0.5rem;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer .fab {
+    font-size: 0.5rem;
+    color: #343a40;
+}
+
+footer .fab:hover {
+    color: #007bff;
+}
+
+footer p {
+    font-size: 0.5rem; /* Reduced font size */
+}
+

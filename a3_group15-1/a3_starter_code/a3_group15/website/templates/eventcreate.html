@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> MusicTik </title>
+    <!-- update it everywhere -->
+     <!--  EDIT 1: the nav bar did not go the way intended - dropdowns don't work and the way it has been formatted is ugly -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../n10999230_yeung/static/style/eventcreate.css">
+</head>
+
+<!-- next pg to work on -->
+<body> 
+    <!-- this is for the second dropdown -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"> MusicTik </a>
+            <input type="checkbox" id="navbar-toggle" class="navbar-toggler" aria-controls ="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <label for="navbar-toggle" class="navbar-toggler-icon"> </label>
+            <!-- removed code to accustom for boostrap rather than reliance on js -->
+            <!-- <button class="navbar-toggler" type ="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls
+                <span class="navbar-toggler-icon"> </span>
+            </button>  -->
+            <div class = "collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">                    
+                </ul>
+
+                <ul class="navbar-nav ml-auto d-flex align-items-center">
+                    <li class="nav-item active"></li>
+                        <a class="nav-link" href="#login"> 
+                            <div class=""></div> Welcome back User2245 <span class="sr-only"></span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#profile">
+                            <div class="uil uil--user-circle"></div> 
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link d-flex align-items-center" href="#profile">
+                            <div class="uil uil--user-circle"></div> 
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="uil--menu"></div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="book.html">Book</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>          
+        </div>      
+    </nav>
+    <div class="container mt-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h2 class="text-center">Create Your New Event</h2>
+                <section class="Create">
+                    <div class="card mx-auto mb-4" style="width: 80%;">
+                        <img id="imagePreview" src="../n10999230_yeung/static/img/toryconcert2.png" class="card-img-top" alt="Imagemain">
+                        <div class="card-body">
+                            <h5 class="card-title">Upload Event Image</h5>
+                            <div class="mb-3">
+                                <label for="imageUpload" class="form-label">Choose an image</label>
+                                <input type="file" id="imageUpload" class="form-control" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mx-auto mb-4" style="width: 80%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Event Description</h5>
+                            <div class="mb-3">
+                                <label for="eventDescription" class="form-label">Describe your event</label>
+                                <textarea id="eventDescription" class="form-control" rows="5" placeholder="Enter event description here..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mx-auto" style="width: 80%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Event Date</h5>
+                            <div class="mb-3">
+                                <label for="eventDate" class="form-label">Select the date of the event</label>
+                                <div class="input-group">
+                                    <input type="date" id="eventDate" class="form-control" placeholder="Select date">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#dateModal">
+                                        <i class="bi bi-calendar"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card mx-auto" style="width: 80%;">
+                        <div class="card-body">
+                            <h5 class="card-title">Event Time</h5>
+                            <div class="mb-3">
+                                <label for="eventTime" class="form-label">Select the time of the event</label>
+                                <div class="input-group">
+                                    <input type="time" id="eventTime" class="form-control" placeholder="Select time">
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#timeModal">
+                                        <i class="bi bi-clock"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    
+                    <!-- needs to be fixed -->
+                    <div class="container mt-4">
+                        <div class="card-body">
+                            <div class="col-md-6 offset-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Artist Name</h5>
+                                        <div class="mb-3">
+                                            <label for="artistName" class="form-label">Enter the artist's name</label>
+                                            <input type="text" class="form-control" id="artistName" name="artistName" placeholder="Artist Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-4">
+                        <div class="card-body">
+                            <div class="col-md-6 offset-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Name of event </h5>
+                                        <div class="mb-3">
+                                            <label for="eventName" class="form-label"> Name of event</label>
+                                            <input type="text" class="form-control" id="eventName" name="eventName" placeholder="Event Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div class="col-md-6 offset-md-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Artist Name</h5>
+                                        <div class="mb-3">
+                                            <label for="artistName" class="form-label">Enter the artist's name</label>
+                                            <input type="text" class="form-control" id="artistName" name="artistName" placeholder="Artist Name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+
+
+
+                </section>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Date Modal -->
+    <div class="modal fade" id="dateModal" tabindex="-1" aria-labelledby="dateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dateModalLabel">Select Event Date</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="date" class="form-control" id="modalDateInput">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.getElementById('eventDate').value = document.getElementById('modalDateInput').value;">Save Date</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="timeModal" tabindex="-1" aria-labelledby="timeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timeModalLabel">Select Event Time</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="time" class="form-control" id="modalTimeInput">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="document.getElementById('eventTime').value = document.getElementById('modalTimeInput').value;">Save Time</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Drop-Down Modal -->
+    <div class="container"></div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-6">
+                <div class="dropdown mt-4">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="genreDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Genre
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="genreDropdown">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#genreModal" data-value="RnB">RnB</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#genreModal" data-value="Rock">Rock</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#genreModal" data-value="Jazz">Jazz</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown mt-4">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="venueDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Venue
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="venueDropdown">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#venueModal" data-value="Brisbane Entertainment Centre">Brisbane Entertainment Centre</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#venueModal" data-value="Fortitude Hall">Fortitude Hall</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#venueModal" data-value="Brisbane Convention Centre">Brisbane Convention Centre</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#venueModal" data-value="Sydney Opera House">Sydney Opera House</a></li>
+                    </ul>
+                </div>
+
+                <div class="dropdown mt-4">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="statusDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Event Status
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="statusDropdown">
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#statusModal" data-value="Open">Open</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#statusModal" data-value="Cancelled">Cancelled</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#statusModal" data-value="Inactive">Inactive</a></li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#statusModal" data-value="Sold Out">Sold Out</a></li>
+                    </ul>
+                </div>
+
+                <!-- Modals for displaying selected options -->
+                <div class="modal fade" id="genreModal" tabindex="-1" aria-labelledby="genreModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="genreModalLabel">Selected Genre</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="selectedGenre">None</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="venueModal" tabindex="-1" aria-labelledby="venueModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="venueModalLabel">Selected Venue</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="selectedVenue">None</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="statusModal" tabindex="-1" aria-labelledby="statusModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="statusModalLabel">Selected Status</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p id="selectedStatus">None</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-end">
+                <a href="index.html" class="btn btn-primary">Submit</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.dropdown-item').forEach(item => {
+            item.addEventListener('click', function() {
+                const value = this.getAttribute('data-value');
+                const target = this.getAttribute('data-bs-target');
+                document.querySelector(target + ' .modal-body p').textContent = value;
+            });
+        });
+    </script>
+    
+    
+    <!-- footer to add to each page ~ made it more sophisticated to have more details-->
+    <footer class="bg-light text-center text-lg-start py-4 mt-4">
+        <div class="container">
+            <div class="row">
+                <!-- Support Column -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Support</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#Help Centre" class="text-dark">Help Centre</a></li>
+                        <li><a href="#Contact Us" class="text-dark">Contact Us</a></li>
+                        <li><a href="#FAQS" class="text-dark">FAQs</a></li>
+                    </ul>
+                </div>
+                <!-- About Us Column -->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">About Us</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Our Story</a></li>
+                        <li><a href="#!" class="text-dark">Careers</a></li>
+                        <li><a href="#!" class="text-dark">Blog</a></li>
+                    </ul>
+                </div>
+                <!-- Terms and Conditions Column -->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Terms and Conditions</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">Privacy Policy</a></li>
+                        <li><a href="#!" class="text-dark">Terms of Service</a></li>
+                        <li><a href="#!" class="text-dark">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <a href="#" class="text-dark me-4"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-dark me-4"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-dark me-4"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-dark me-4"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="text-dark">© 2024 MusicTik. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- js for bootstrap func. -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
